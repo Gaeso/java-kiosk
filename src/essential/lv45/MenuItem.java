@@ -1,5 +1,6 @@
 package essential.lv45;
 
+// 상세 아이템들을 관리하는 클래스
 public class MenuItem {
 
     private final String itemName;

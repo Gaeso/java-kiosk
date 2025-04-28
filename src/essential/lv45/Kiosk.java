@@ -28,6 +28,8 @@ public class Kiosk {
                 i++;
             }
             System.out.println("0. 종료");
+
+            // 메뉴 선택 입력문
             try {
                 selectedMenuNumber = Integer.parseInt(sc.nextLine());
                 if(selectedMenuNumber < 0 || selectedMenuNumber > menuList.size()) {
@@ -45,6 +47,8 @@ public class Kiosk {
             while(selectedItemNumber != 0) {
                 menuList.get(selectedMenuNumber-1).showMenuItems();
                 System.out.println("0. 뒤로가기");
+
+                // 아이템 선택 입력문
                 try {
                     selectedItemNumber = Integer.parseInt(sc.nextLine());
                     if(selectedItemNumber < 0 || selectedItemNumber > menuList.get(selectedMenuNumber-1).getMenuItemList().size()) {

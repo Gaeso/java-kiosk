@@ -11,7 +11,7 @@ public class Menu {
 
     public Menu(String menuName, List<String[]> items) {
         this.menuName = menuName;
-        this.menuHeader = menuName.toUpperCase() + "MENU";
+        this.menuHeader = menuName.toUpperCase() + " MENU";
         for (String[] item : items) {
             menuItems.add(new MenuItem(item[0], item[1], item[2]));
         }
@@ -20,9 +20,7 @@ public class Menu {
     public String getMenuName() {
         return menuName;
     }
-    public MenuItem getMenuItem(int index) {
-        return menuItems.get(index);
-    }
+
     public void showMenuItems(){
         System.out.println("[ " + menuHeader + " ]");
         for(int i = 0; i < menuItems.size(); i++)
