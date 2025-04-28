@@ -4,10 +4,20 @@ import java.util.List;
 import java.util.Scanner;
 
 // 메뉴 출력, 사용자의 입력 처리를 관리하는 클래스
-public class OrderSystem {
+public class OrderSystem implements AutoCloseable {
 
-    private final Scanner sc = new Scanner(System.in);
+    private final Scanner sc;
     private boolean breakFlag = false;
+
+    public OrderSystem() {
+        sc = new Scanner(System.in);
+    }
+
+    // 스캐너를 클래스가 사라질때 close하기 위해
+    @Override
+    public void close() {
+        sc.close();
+    }
 
     public void showAllMenu(int i, List<Menu> menuList) {
         System.out.println("[ MAIN MENU ]");

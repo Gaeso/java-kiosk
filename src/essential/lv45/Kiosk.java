@@ -1,13 +1,11 @@
 package essential.lv45;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class Kiosk {
 
     private final List<Menu> menuList;
-    private final Scanner sc = new Scanner(System.in);
-    private final OrderSystem os = new OrderSystem();
+    OrderSystem os = new OrderSystem();
 
     public Kiosk(List<Menu> menuList) {
         this.menuList = menuList;
@@ -46,6 +44,5 @@ public class Kiosk {
             }
         }
         System.out.println("주문을 종료합니다.");
-        sc.close();
     }
 }
