@@ -15,7 +15,7 @@
 #### 프로젝트 클론
 
 bash
-git clone https://github.com/your-repo/java-kiosk.git
+git clone https://github.com/Gaeso/java-kiosk.git
 컴파일 및 실행
 
 ## 📝 클래스 상세 설명
